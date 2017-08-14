@@ -4,8 +4,8 @@ import { getProducts } from '../../services/productService';
 
 
 class Store extends Component {
-  constructor() {
-    super() 
+  constructor(props) {
+    super(props) 
       this.state = {
         products: []
       }
@@ -24,9 +24,9 @@ render() {
 
         const products = this.state.products.map((product, i) => (
             <ul key={i} className='product'>
-                 <Link to={ `detail/${product.id}`} name={product.title}> 
+                  <Link to={ `detail/${product.id}`} name={product.title}>  
                  <img src={ product.image } className='storeImages' alt='clothing'/> 
-                 </Link> 
+                  </Link>  
     
                  <h3>{ product.title }</h3> 
             </ul>

@@ -20,6 +20,7 @@ app.use(cors())
 const controller = require('./controller.js')
 
 app.get('/products', controller.productsData)
+app.get('/product/:id', controller.getProduct)
 
 app.listen(port, function() {
   console.log("Started server on port", port);
